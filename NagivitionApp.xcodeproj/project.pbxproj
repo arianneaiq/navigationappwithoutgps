@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4EDFC66329BA896E0043FFE9 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDFC66229BA896E0043FFE9 /* LocationManager.swift */; };
-		4EDFC66E29BE69BA0043FFE9 /* SoundManager .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDFC66D29BE69BA0043FFE9 /* SoundManager .swift */; };
 		4EDFC67529BF325E0043FFE9 /* AppleAirtagSoundEffect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EDFC67429BF325E0043FFE9 /* AppleAirtagSoundEffect.mp3 */; };
 		4EFFBDC629B9E799003E5F33 /* NagivitionAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFFBDC529B9E799003E5F33 /* NagivitionAppApp.swift */; };
 		4EFFBDC829B9E799003E5F33 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFFBDC729B9E799003E5F33 /* ContentView.swift */; };
@@ -22,7 +21,6 @@
 /* Begin PBXFileReference section */
 		4EDFC66229BA896E0043FFE9 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		4EDFC66C29BD20D00043FFE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		4EDFC66D29BE69BA0043FFE9 /* SoundManager .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SoundManager .swift"; sourceTree = "<group>"; };
 		4EDFC67429BF325E0043FFE9 /* AppleAirtagSoundEffect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = AppleAirtagSoundEffect.mp3; path = ../../../Downloads/AppleAirtagSoundEffect.mp3; sourceTree = "<group>"; };
 		4EFFBDC229B9E799003E5F33 /* NagivitionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NagivitionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EFFBDC529B9E799003E5F33 /* NagivitionAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NagivitionAppApp.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -70,7 +68,6 @@
 				4EDFC67429BF325E0043FFE9 /* AppleAirtagSoundEffect.mp3 */,
 				4EFFBDD829B9E80E003E5F33 /* Mapview .swift */,
 				4EDFC66229BA896E0043FFE9 /* LocationManager.swift */,
-				4EDFC66D29BE69BA0043FFE9 /* SoundManager .swift */,
 				4EFFBDC929B9E79B003E5F33 /* Assets.xcassets */,
 				4EFFBDCE29B9E79B003E5F33 /* Persistence.swift */,
 				4EFFBDD029B9E79B003E5F33 /* NagivitionApp.xcdatamodeld */,
@@ -160,7 +157,6 @@
 			files = (
 				4EFFBDD929B9E80E003E5F33 /* Mapview .swift in Sources */,
 				4EFFBDCF29B9E79B003E5F33 /* Persistence.swift in Sources */,
-				4EDFC66E29BE69BA0043FFE9 /* SoundManager .swift in Sources */,
 				4EDFC66329BA896E0043FFE9 /* LocationManager.swift in Sources */,
 				4EFFBDC829B9E799003E5F33 /* ContentView.swift in Sources */,
 				4EFFBDC629B9E799003E5F33 /* NagivitionAppApp.swift in Sources */,

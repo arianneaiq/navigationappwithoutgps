@@ -24,29 +24,28 @@ struct MapView: UIViewRepresentable {
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView(frame: UIScreen.main.bounds)
         mapView.delegate = context.coordinator
-        // Show the user's location with a blue dot and arrow
         mapView.showsUserLocation = true
         mapView.userTrackingMode = .followWithHeading
         mapView.isUserInteractionEnabled = true
         mapView.isZoomEnabled = true
         mapView.isScrollEnabled = true
-        // Create an instance of MKUserTrackingButton and add it to the map view
+        
+        
         let userTrackingButton = MKUserTrackingButton(mapView: mapView)
         mapView.addSubview(userTrackingButton)
         userTrackingButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            userTrackingButton.trailingAnchor.constraint(equalTo: mapView.trailingAnchor, constant: -16),
-            userTrackingButton.bottomAnchor.constraint(equalTo: mapView.bottomAnchor, constant: -16)
+            userTrackingButton.trailingAnchor.constraint(equalTo: mapView.trailingAnchor, constant: -20),
+            userTrackingButton.bottomAnchor.constraint(equalTo: mapView.bottomAnchor, constant: -20)
         ])
         return mapView
     }
     
-    // Define a function that creates a Coordinator object to handle map view events
+    // a function that creates a Coordinator object to handle map view events
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
     
-    // Define a Coordinator class that conforms to the MKMapViewDelegate protocol
     class Coordinator: NSObject, MKMapViewDelegate {
         var parent: MapView
         
@@ -64,7 +63,7 @@ struct MapView: UIViewRepresentable {
             return pin
         }
         
-        // Add renderer for the blue line
+        // renderer for the blue line
         func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
             let renderer = MKPolylineRenderer(polyline: overlay as! MKPolyline)
             renderer.strokeColor = .blue

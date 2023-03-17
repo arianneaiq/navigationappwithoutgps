@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EDA72CE29C4C3E300C0D020 /* beatSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EDA72CD29C4C3E300C0D020 /* beatSong.mp3 */; };
 		4EDFC66329BA896E0043FFE9 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDFC66229BA896E0043FFE9 /* LocationManager.swift */; };
 		4EDFC67529BF325E0043FFE9 /* AppleAirtagSoundEffect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EDFC67429BF325E0043FFE9 /* AppleAirtagSoundEffect.mp3 */; };
 		4EFFBDC629B9E799003E5F33 /* NagivitionAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFFBDC529B9E799003E5F33 /* NagivitionAppApp.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4EDA72CD29C4C3E300C0D020 /* beatSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = beatSong.mp3; path = ../../../Downloads/beatSong.mp3; sourceTree = "<group>"; };
 		4EDFC66229BA896E0043FFE9 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		4EDFC66C29BD20D00043FFE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4EDFC67429BF325E0043FFE9 /* AppleAirtagSoundEffect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = AppleAirtagSoundEffect.mp3; path = ../../../Downloads/AppleAirtagSoundEffect.mp3; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				4EFFBDC529B9E799003E5F33 /* NagivitionAppApp.swift */,
 				4EFFBDC729B9E799003E5F33 /* ContentView.swift */,
 				4EDFC67429BF325E0043FFE9 /* AppleAirtagSoundEffect.mp3 */,
+				4EDA72CD29C4C3E300C0D020 /* beatSong.mp3 */,
 				4EFFBDD829B9E80E003E5F33 /* Mapview .swift */,
 				4EDFC66229BA896E0043FFE9 /* LocationManager.swift */,
 				4EFFBDC929B9E79B003E5F33 /* Assets.xcassets */,
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EFFBDCD29B9E79B003E5F33 /* Preview Assets.xcassets in Resources */,
+				4EDA72CE29C4C3E300C0D020 /* beatSong.mp3 in Resources */,
 				4EFFBDCA29B9E79B003E5F33 /* Assets.xcassets in Resources */,
 				4EDFC67529BF325E0043FFE9 /* AppleAirtagSoundEffect.mp3 in Resources */,
 			);

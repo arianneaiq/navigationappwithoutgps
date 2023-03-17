@@ -15,14 +15,13 @@ class LocationManager: NSObject, CLLocationManagerDelegate, ObservableObject {
         super.init()
         self.locationManager.delegate = self
         self.locationManager.requestWhenInUseAuthorization()
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         self.locationManager.distanceFilter = 10.0
     }
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         if manager.authorizationStatus == .authorizedWhenInUse {
             self.locationManager.startMonitoringSignificantLocationChanges()
-            self.locationManager.startUpdatingHeading()
         }
     }
     
@@ -45,34 +44,33 @@ class LocationManager: NSObject, CLLocationManagerDelegate, ObservableObject {
         let klokgebouwLocation = CLLocation(latitude: 51.44896327756864, longitude: 5.458107710449188)
         let distance = location.distance(from: klokgebouwLocation)
         
-        // Adjust the tempo of the audio based on the distance
-        var beatsPerMinute = 60.0
-        if distance < 100 {
-            beatsPerMinute = 120.0
-        } else if distance < 500 {
-            beatsPerMinute = 90.0
-        } else {
-            beatsPerMinute = 60.0
-        }
-        
-        // Play the audio with the adjusted tempo
-        if let audioURL = Bundle.main.url(forResource: "AppleAirtagSoundEffect", withExtension: "mp3") {
-            do {
-                let audioPlayer = try AVAudioPlayer(contentsOf: audioURL)
-                audioPlayer.enableRate = true
-                audioPlayer.rate = Float(beatsPerMinute / 60.0)
-                audioPlayer.play()
-                self.audioPlayer = audioPlayer
-            } catch {
-                print("Error playing audio: \(error.localizedDescription)")
+        // Check if the user is within 500 meters of the Klokgebouw
+        if distance < 500 {
+            // Calculate the tempo based on the distance
+            var beatsPerMinute = 60.0
+            if distance < 100 {
+                beatsPerMinute = 120.0
+            } else if distance < 300 {
+                beatsPerMinute = 90.0
+            } else {
+                beatsPerMinute = 60.0
             }
-        } else {
-            print("Audio file not found.")
+
+            // Play the audio with the adjusted tempo
+            if let audioURL = Bundle.main.url(forResource: "beatSong", withExtension: "mp3") {
+                do {
+                    let audioPlayer = try AVAudioPlayer(contentsOf: audioURL)
+                    audioPlayer.enableRate = true
+                    audioPlayer.rate = Float(beatsPerMinute / 60.0)
+                    audioPlayer.play()
+                    self.audioPlayer = audioPlayer
+                } catch {
+                    print("Error playing audio: \(error.localizedDescription)")
+                }
+            } else {
+                print("Audio file not found.")
+            }
         }
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
-        print(newHeading.trueHeading)
-        heading = newHeading.trueHeading
-    }
 }
